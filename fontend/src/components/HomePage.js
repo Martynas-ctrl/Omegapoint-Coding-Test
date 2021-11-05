@@ -14,7 +14,7 @@ function HomePage () {
 
                         <div style={{textAlign: 'center'}} className="product-detailsHomePage">
                             
-                            <h1>HOMEPAGE</h1>
+                            <h1>WELCOME</h1>
 
                             <p className="information">
                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
