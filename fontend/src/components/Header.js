@@ -1,45 +1,31 @@
-import React, {useState, useEffect} from 'react';
-// import img from './Images/game store logo.svg';
-// import Search from './Search';
-// import AddProduct from './AddProduct';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
-// import './css/Header.css';
-// import test1 from './images/test41.jpg';
-// import './css/Search.css';
+import { Helmet } from 'react-helmet';
+
     
 const Header = () => {
 
-  const [navbar, setNavbar] = useState(false);
-  const [menuIcon, setMenuIcon] = useState(false);
-  const [toggle, setToggle] = useState(false);
-
   return (
-      <div>
-    <header className="l-header">
-    {/* <Helmet>
-        <title>Portfolio</title>
-    </Helmet> */}
+    <div>
+        <header className="l-header">
 
+            <Helmet>
+                <title>Omegapoint Coding Test</title>
+            </Helmet>
 
- {/* <!-- navbar section start --> */}
+            <nav className='navbar'>
+                <div className="max-width" style={{textAlign: 'center'}}>
+                    <div className="logo"><a href="#">Product<span>Page.</span></a></div>
+                    <ul className="menu"> 
+                        <li><Link to='/'><h4>Home</h4></Link></li>
+                        <li><Link to='/AllProductsPage'><h4>Product</h4></Link></li>
+                    </ul>
+                </div>
+            </nav>
 
-    <nav className='navbar'>
-        <div className="max-width" style={{textAlign: 'center'}}>
-            <div className="logo"><a href="#">Product<span>Page.</span></a></div>
-            <ul className="menu"> 
-                <li><Link to='/'><h4>Home</h4></Link></li>
-                <li><Link to='/AllProductsPage'><h4>Product</h4></Link></li>
-            </ul>
-        </div>
-    </nav>
+        </header>
 
-     
-
-  </header>
-
-  
-  </div>
-  
+    </div>
   );
 };
 

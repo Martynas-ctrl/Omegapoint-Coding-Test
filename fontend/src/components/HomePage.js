@@ -1,18 +1,43 @@
-import React, {Component} from 'react';
-import { Link } from 'react-router-dom'
+import React from 'react';
 
 function HomePage () {
  
       return (
-          <div className="App">
-            <header className="App-header">
-            <div className='container'>
-               
-            </div>
-          </header>
-          </div>
-      );
-    }
+        <div> 
+          <section className="framework" id="framework" style={{paddingTop: '200px'}}>
+              <div className="max-width">
+                  <h1 style={{font: '100px'}} className="title"></h1>
+                  <div className="port-content">
   
-    
-  export default HomePage;
+                    <div style={{maxWidth:' 1200px', textAlign: 'center'}} id="container">	
+
+                        <div style={{textAlign: 'center'}} className="product-detailsHomePage">
+                            
+                            <h1>HOMEPAGE</h1>
+
+                            <p className="information">
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </p>
+
+                            <p className="information">
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </p>
+                            
+                        </div>
+
+                    </div>
+
+                  </div>
+              </div>
+          </section>
+        </div>          
+      );
+}
+  
+export default HomePage;
