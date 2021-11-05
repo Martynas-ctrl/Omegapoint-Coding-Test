@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route  } from 'react-router-dom';
-import test1 from './components/images/test41.jpg';
+// import test1 from './components/images/test41.jpg';
 
 import HomePage from './components/HomePage';
 import AllProductsPage from './components/AllProductsPage';
@@ -23,8 +23,8 @@ function App () {
              <Route path='/AllProductsPage' render= { () => <AllProductsPage/>} />
              <Route path='/DetailsPage/:id' render = { () => <DetailsPage/>} />
          </main>
-         <footer style={{backgroundImage: `url(${test1}`}}>
-          <span><a href='https://github.com/Martynas-ctrl/Omegapoint-Coding-Test' target='_blank'>Se koden på Gihub </a></span>
+         <footer style={{backgroundColor: '#F9A826'}}>
+          <span><a  style={{color: '#fff'}} href='https://github.com/Martynas-ctrl/Omegapoint-Coding-Test' target='_blank'>Se koden på Gihub </a></span>
         </footer>
         </div>
       </Router>

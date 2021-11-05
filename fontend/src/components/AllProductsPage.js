@@ -1,14 +1,15 @@
 import { React, useState, useEffect } from 'react'
-import './css/Allproducts.css';
+// import './css/Allproducts.css';
 
 import axios from 'axios';
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import '../components/css/carousel.css';
 
 
 
-let testz = {
+const responsiveWeb = {
   responsive:{
       0:{
           items:1,
@@ -20,7 +21,7 @@ let testz = {
          
       },
       1000:{
-          items:3,
+          items:2,
       }
   }
  
@@ -62,31 +63,43 @@ function AllProductsPage () {
   }
       return (
         <div>
-            <section className="services" style={{paddingTop: '200px'}}>
+            
+            <section className="framework" id="framework" style={{paddingTop: '200px'}}>
                 <div className="max-width">
-                    <h2 className="title"></h2>
-                    <OwlCarousel className="owl-theme"  margin={10} {...testz} items={3} autoplay >
-                            {allProducts.map(product=> (
-                                <div className="port-content" >
-                                  <div className="card" style={{minHeight: '500px' }} onClick={sendToDetailsPage.bind(this, product.id)} >
-                                    <div key={product.id} className="box" >
-                                        <img key={product.image} src={product.image}  alt=""  style={{height: '200px', display: 'block',  marginLeft: 'auto',  marginRight: 'auto', width: '300px' }}/>
-                                        <p style={{textAlign:'center', color: '#F9A826',  fontSize: '20px',}} key={product.title} className="product_description">{product.title}</p>
-                                        <p  style={{textAlign:'center', color: '#F9A826', fontSize: '15px', }} key={product.description} className="product_name">{product.description}</p>
-                                        <p  style={{paddingLeft:'10px', color: '#F9A826', fontSize: '15px'}}key={product.category} className="product_name">Category: {product.category}</p>
-                                        <p  style={{paddingLeft:'10px', fontSize: '20px', color: '#F9A826'}} key={product.price} className="product_description">${product.price}</p>
-                                        <div style={{display: 'flex',color: '#F9A826'}}>
-                                          <p style={{paddingLeft:'10px', color: '#F9A826'}} className="product_description">Rating rate: {product.rating.rate}</p>
-                                          <p style={{paddingLeft:'10px', color: '#F9A826'}} className="product_description">Rating count: {product.rating.count}</p>
-                                        </div>
-                                        {/* <Link to={'/DetailsPage/' + product.id} ><p className='editButtonDetailpage'>Go to this product </p> </Link> */}
-                                    </div>
-                                </div>
-                                </div>
+                  <h1 style={{font: '100px'}} className="title"></h1>
+                    <div className="port-content">
+                        <OwlCarousel className="owl-theme" loop margin={10} {...responsiveWeb} items={20} autoplay >
+                                                  {allProducts.map(product=> (
+                                            
+                                            <div id="container">	
+	
+                                  <div className="product-details">
+                                    <h3 key={product.title} >{product.title}</h3>
+                                    <p className="information" key={product.description}>{product.description}</p>
+                                    <button id='btnbtn' onClick={sendToDetailsPage.bind(this, product.id)}>${product.price} Buy</button>
+                                  </div>
+                                
+                              <div class="product-image">
+                                
+                                <img key={product.image} src={product.image}  alt=""  style={{height: '300px', width: '200px', marginLeft: '30%',  marginTop: '100px' }}/>
+                                
+                                <div class="info">
+                                    <h2> Description</h2>
+                                    <ul>
+                                      <li><strong>Category : </strong> {product.category}</li>
+                                      <li><strong>Rating rate : </strong>{product.rating.rate}</li>
+                                      <li><strong>Rating count : </strong>{product.rating.count}</li>
+                                    </ul>
+                                  </div>
+                                  </div>
+                            </div> 
                             ) )}
-                    </OwlCarousel>
-                </div>
-            </section>
+            </OwlCarousel>
+        </div>
+  
+    </div>
+</section>
+            
           </div>   
   )
 }
