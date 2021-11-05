@@ -296,9 +296,16 @@ section .title::after{
   background-image: linear-gradient( to right, #ffe7b3,#a146eb);
   background-attachment: fixed;	
   background-size: cover;
-  content: "Homepage";
+  content: "Start Page";
 }
 
+.productList .title::after{
+  background: #DFC2F2;
+  background-image: linear-gradient( to right, #ffe7b3,#a146eb);
+  background-attachment: fixed;	
+  background-size: cover;
+  content: "Product List";
+}
 
 .owl-dots{
   text-align: center;
@@ -310,7 +317,7 @@ section .title::after{
   margin: 0 5px;
   outline: none!important;
   border-radius: 50%;
-  border: 2px solid #F9A826!important;
+  border: 2px solid rgba(255, 255, 255, 0.90)!important;
   transition: all 0.3s ease;
 }
 .owl-dot.active{
@@ -319,7 +326,7 @@ section .title::after{
 }
 .owl-dot.active,
 .owl-dot:hover{
-  background: #F9A826!important;
+  background: rgba(255, 255, 255, 0.90)!important;
 }
 
 /* footer section styling */
@@ -503,7 +510,7 @@ footer {
 
   h1{
     font-size: 35px!important;
-}
+  }
   
 }
 
@@ -515,16 +522,17 @@ footer {
 
   h1{
     font-size: 30px!important;
-}
+  }
   
 }
 
 @media only screen and (max-width: 400px) {
   p{
     font-size: 10px!important;
-}
+  }
 
-h1{
-  font-size: 25px!important;
-}
+  h1{
+    font-size: 25px!important;
+  }
+  
 }

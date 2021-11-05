@@ -5,6 +5,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import '../components/css/carousel.css';
+import './css/productList.css';
 
 
 
@@ -59,7 +60,7 @@ function AllProductsPage () {
   }
       return (
         <div>
-            <section className="framework" id="framework" style={{paddingTop: '200px'}}>
+            <section className="productList" id="framework" style={{paddingTop: '200px'}}>
                 <div className="max-width">
                   <h1 style={{font: '100px'}} className="title"></h1>
                     <div className="port-content">
@@ -69,17 +70,19 @@ function AllProductsPage () {
 	                              <div className="product-details">
                                   <h3 key={product.title} >{product.title}</h3>
                                   <p className="information" key={product.description}>{product.description}</p>
-                                  <button id='btnbtn' onClick={sendToDetailsPage.bind(this, product.id)}>${product.price} Buy</button>
+                                  <h3 key={product.title} >${product.price}</h3>
+                                  <button id='btnbtn' onClick={sendToDetailsPage.bind(this, product.id)}>Read More</button>
                                 </div>
                                 
                                 <div class="product-image">
-                                  <img key={product.image} src={product.image}  alt=""  style={{height: '300px', width: '200px', marginLeft: '30%',  marginTop: '100px' }}/>
+                                  <img key={product.image} src={product.image}  alt="" />
                               
                                   <div class="info">
-                                    <h2> Description</h2>
+                                    <h2>More Information</h2>
                                       <ul>
                                         <li><strong>Category : </strong> {product.category}</li>
                                         <li><strong>Rating rate : </strong>{product.rating.rate}</li>
+                                        <li><strong>Rating count : </strong>{product.rating.count}</li>
                                         <li><strong>Rating count : </strong>{product.rating.count}</li>
                                       </ul>
                                   </div>

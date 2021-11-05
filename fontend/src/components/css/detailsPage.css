@@ -1,0 +1,30 @@
+.product-details {
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    padding: 30px;
+    height: 100%;
+    float: right;
+    width: 55%;
+}
+
+.detailsPage .title::after{
+    background: #DFC2F2;
+    background-image: linear-gradient( to right, #ffe7b3,#a146eb);
+    background-attachment: fixed;	
+    background-size: cover;
+    content: "Product Details";
+  }
+
+  h5 {
+    font-family: 'EB Garamond', serif;
+    color: #7d7d7d;
+    font-weight: bold;
+  }
+
+  img{
+    height: 600px;
+    width: 600px!important;
+    padding-right: 200px;
+  }
+  

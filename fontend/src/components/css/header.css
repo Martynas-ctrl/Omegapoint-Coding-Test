@@ -13,7 +13,6 @@
   }
 
   
-  
   .navbar.sticky{
       padding: 15px 0;
       background: #F9A826;
@@ -137,6 +136,8 @@
     background: linear-gradient(to right, #ffe7b3,#a146eb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   }
 
   a {

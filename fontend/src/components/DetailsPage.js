@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import axios from 'axios';
+import './css/detailsPage.css'
 
 function DetailsPage() { 
 
@@ -31,7 +32,7 @@ function DetailsPage() {
 
       return (
           <div> 
-                <section className="framework" id="framework" style={{paddingTop: '200px'}}>
+                <section className="detailsPage" id="framework" style={{paddingTop: '200px'}}>
                     <div className="max-width">
                         <h1 style={{font: '100px'}} className="title"></h1>
                         <div className="port-content">
@@ -41,6 +42,9 @@ function DetailsPage() {
 
                                     <div className="product-details">
                                         <h3 key={info.title} >{info.title}</h3>
+                                        <h5 key={info.category} >{info.category}</h5>
+                                        <h5 key={info.rating.rate} >{info.rating.rate} / 5</h5>
+                                        <h5 key={info.rating.count} >{info.rating.count}</h5>
                                         <p className="information" key={info.description}>{info.description}</p>
                                         <button id='btnbtn'>${info.price} Buy</button>
                                     </div>
@@ -48,14 +52,14 @@ function DetailsPage() {
                                     <div class="product-image">
                                         <img key={info.image} src={info.image}  alt=""  style={{height: '300px', width: '200px', marginLeft: '30%',  marginTop: '100px' }}/>
                                         
-                                        <div class="info">
+                                        {/* <div class="info">
                                             <h2>Description</h2>
                                             <ul>
                                                 <li><strong>Category : </strong> {info.category}</li>
                                                 <li><strong>Rating rate : </strong>{info.rating.rate}</li>
                                                 <li><strong>Rating count : </strong>{info.rating.count}</li>
                                             </ul>
-                                        </div>
+                                        </div> */}
 
                                     </div>
                                 </div>
