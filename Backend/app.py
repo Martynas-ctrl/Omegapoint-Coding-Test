@@ -2,7 +2,6 @@ import json, requests, sys
 from flask import Flask, request, jsonify, abort
 
 app = Flask('kodtest')
-DB_FILE = 'databas.json' # also just for testing
 DATABASE = []
 
 #default
@@ -68,11 +67,6 @@ if __name__ == '__main__':
     if status != 200:
         print(f'Database couldnt load. error code: {status}')
         sys.exit(1) 
-     
-    #JUST FOR TESTING#####
-    #with open(DB_FILE, 'r') as f:###
-    #    DATABASE = json.load(f)####
-    #######
 
     app.run(host='0.0.0.0')
     
