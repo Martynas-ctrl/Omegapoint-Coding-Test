@@ -1,27 +1,31 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet';
+import './css/header.css';
 
     
 const Header = () => {
 
+
   return (
     <div>
-        <header className="l-header">
+        <header  className="l-header">
 
             <Helmet>
                 <title>Omegapoint Coding Test</title>
             </Helmet>
 
-            <nav className='navbar'>
-                <div className="max-width" style={{textAlign: 'center'}}>
-                    <div className="logo"><a href="#">Product<span>Page.</span></a></div>
-                    <ul className="menu"> 
-                        <li><Link to='/'><h4>Home</h4></Link></li>
-                        <li><Link to='/AllProductsPage'><h4>Product</h4></Link></li>
-                    </ul>
-                </div>
-            </nav>
+        <div  className="container">
+       
+          
+          <Link to='/'><h3>Home</h3></Link>
+          <Link to='/AllProductsPage'><h3>Product</h3></Link>
+        </div>
+        <div className="container_search_input">
+       
+        </div>
+     
+    
 
         </header>
 

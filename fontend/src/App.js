@@ -22,8 +22,8 @@ function App () {
             <Route path='/AllProductsPage' render= { () => <AllProductsPage/>} />
             <Route path='/DetailsPage/:id' render = { () => <DetailsPage/>} />
          </main>
-         <footer style={{backgroundColor: '#F9A826'}}>
-          <span><a  style={{color: '#fff'}} href='https://github.com/Martynas-ctrl/Omegapoint-Coding-Test' target='_blank'>Se koden på Gihub </a></span>
+         <footer style={{backgroundColor: 'rgba(255, 255, 255, 0.90)'}}>
+          <span><a id='a' href='https://github.com/Martynas-ctrl/Omegapoint-Coding-Test' target='_blank'>Se koden på Gihub </a></span>
          </footer>
         </div>
       </Router>
