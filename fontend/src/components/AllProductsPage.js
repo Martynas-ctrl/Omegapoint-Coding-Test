@@ -31,7 +31,6 @@ function AllProductsPage () {
 
 
   const [allProducts, setAllProducts] = useState([]);
-  const [product, setProduct] = useState([]);
   const [hasError, setHasError] = useState(false);
   
   const getAllProducts = () => {
@@ -42,22 +41,52 @@ function AllProductsPage () {
       setAllProducts(getProducts);
      })  
      .catch((error) => {
+       console.log(error);
        setHasError(true);
       })
     }
 
     useEffect(() => {
       getAllProducts();
-      console.log(allProducts);
-
-      console.log(allProducts)
    }, []);
 
   const sendToDetailsPage = (id) => {
-  
     window.location.href = '/DetailsPage/' + id;
-
   }
+
+  const reloadPage = () => {
+    window.location.reload();
+  }
+
+  if(hasError === true) {
+    return (
+        <div> 
+          <section className="productList" style={{paddingTop: '200px'}}>
+               <div className="max-width">
+                  <h1 style={{font: '100px'}} className="title"></h1>
+                  <div className="port-content">
+  
+                    <div style={{maxWidth:' 1200px', textAlign: 'center'}} id="container">	
+
+                        <div style={{textAlign: 'center'}} className="product-detailsHomePage">
+                            
+                            <h1>500 ERROR!</h1>
+
+                            <p className="information">Internal Server Error!</p>
+                            <p className="information">Oops, something went wrong.</p>
+                            <p className="information">The server is not responding, please try to refresh this page, try again later or feel free to contact your administrator.</p>
+
+                            <button id='btnbtn' onClick={reloadPage}>Reload</button>
+                        </div>
+                        
+                    </div>
+
+                  </div>
+              </div>
+          </section>
+        </div>          
+      );
+}
       return (
         <div>
             <section className="productList" id="framework" style={{paddingTop: '200px'}}>
@@ -82,7 +111,6 @@ function AllProductsPage () {
                                       <ul>
                                         <li><strong>Category : </strong> {product.category}</li>
                                         <li><strong>Rating rate : </strong>{product.rating.rate}</li>
-                                        <li><strong>Rating count : </strong>{product.rating.count}</li>
                                         <li><strong>Rating count : </strong>{product.rating.count}</li>
                                       </ul>
                                   </div>

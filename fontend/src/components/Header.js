@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet';
 import './css/header.css';
 
 const Header = () => {
-
 
   return (
     <div>

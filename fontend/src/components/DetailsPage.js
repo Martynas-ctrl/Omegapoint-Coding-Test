@@ -6,12 +6,8 @@ import './css/detailsPage.css'
 function DetailsPage() { 
 
     const [product, setProduct] = useState([]);
-    const [image, setImage] = useState('');
-    const [category, setCategory] = useState('');
-    const [description, setDescription] = useState('');
-    const [price, setPrice] = useState('');
-    const [rating, setRating] = useState('');
     const [title, setTitle] = useState('');
+    const [errorMsg, setErrorMsg] = useState(false);
 
     const { id } = useParams()
 
@@ -24,11 +20,43 @@ function DetailsPage() {
                 setProduct(getProduct);
                 setTitle(response.data.title);
             })
+            .catch((error) => {
+                console.log(error)   ;   
+                setErrorMsg(true);
+           })
     }
 
     useEffect(() => {
         getProduct();
     });
+
+    if(errorMsg === true) {
+        return (
+            <div> 
+              <section className="detailsPage" id="framework" style={{paddingTop: '200px'}}>
+                   <div className="max-width">
+                      <h1 style={{font: '100px'}} className="title"></h1>
+                      <div className="port-content">
+      
+                        <div style={{maxWidth:' 1200px', textAlign: 'center'}} id="container">	
+    
+                            <div style={{textAlign: 'center'}} className="product-detailsHomePage">
+                                
+                                <h1>404 ERROR!</h1>
+    
+                                <p className="information">Page not Found!</p>
+                                <p className="information">Something went wrong! Look if the product you want to see still exist! Try to go back or refresh the page!</p>
+
+                            </div>
+                            
+                        </div>
+
+                      </div>
+                  </div>
+              </section>
+            </div>          
+          );
+    }
 
       return (
           <div> 
@@ -46,24 +74,15 @@ function DetailsPage() {
                                         <h5 key={info.rating.rate} >{info.rating.rate} / 5</h5>
                                         <h5 key={info.rating.count} >{info.rating.count}</h5>
                                         <p className="information" key={info.description}>{info.description}</p>
-                                        <button id='btnbtn'>${info.price} Buy</button>
+                                        <button id='btnbtn'>${info.price} Buy</button> 
                                     </div>
                                     
                                     <div class="product-image">
                                         <img key={info.image} src={info.image}  alt=""  style={{height: '300px', width: '200px', marginLeft: '30%',  marginTop: '100px' }}/>
-                                        
-                                        {/* <div class="info">
-                                            <h2>Description</h2>
-                                            <ul>
-                                                <li><strong>Category : </strong> {info.category}</li>
-                                                <li><strong>Rating rate : </strong>{info.rating.rate}</li>
-                                                <li><strong>Rating count : </strong>{info.rating.count}</li>
-                                            </ul>
-                                        </div> */}
-
                                     </div>
+
                                 </div>
-                            ) )}
+                              ))}
                         </div>
                     </div>
                 </section>
