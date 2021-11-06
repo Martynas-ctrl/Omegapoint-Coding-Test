@@ -74,10 +74,12 @@ Tryck enter och vänta tills det är klar.
 
 Sedan mata in kommandot npm install för att ladda ner alla bibliotek som jag har använt till projektet.
 
-För att starta React App öppna terminalen eller git bash i frontend src folder och tryck npm start.
+För att starta applikationen gör följande:
 
-Sedan i backend folder öppna Windows Command Prompt och mata in python app.py för att starta backend server.
+1. För att starta react app öppna terminalen eller git bash i frontend src folder och tryck npm start.
 
-Öppna en till Windows Command Prompt i samma backend folder och skriv in ./ngrok http 5000.
+2. Sedan i backend folder öppna Windows Command Prompt och mata in python app.py för att starta backend server.
+
+3. Öppna en till Windows Command Prompt i samma backend folder och skriv in ./ngrok http 5000.
 
 Om du följer instruktionerna så borde allting fungera.
