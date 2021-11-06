@@ -35,10 +35,13 @@ Alla responser från APIn återvänds i Json format.
 
 Applikationen har följande 4 routes som fungerar som API calls:
 
-GET  	/all_products/
-GET  	/get_product_by_id/?id=<product_id>
-DELETE  /remove_product_by_id/?id=<product_id>
-POST  	/add_product/
+	GET  	/all_products/
+	
+	GET  	/get_product_by_id/?id=<product_id>
+	
+	DELETE  /remove_product_by_id/?id=<product_id>
+	
+	POST  	/add_product/
 
 När add_product apin kallas behövs produktdata i korrekt Json format skickas med.
 
