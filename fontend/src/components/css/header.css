@@ -11,23 +11,25 @@
     padding: 15px 0;
     background: #F9A826;
   }
-
   
   .navbar.sticky{
       padding: 15px 0;
       background: #F9A826;
   }
+  
   .navbar .max-width{
       display: flex;
       align-items: center;
       justify-content: space-between;
   }
+
   .navbar .logo a{
       color: #fff;
       font-size: 50px!important;
       font-weight: 600;
       text-shadow: 4px 2px 4px #000000;
   }
+
   .navbar .logo a span{
       color: #F9A826;
       transition: all 0.3s ease;
@@ -41,32 +43,6 @@
   .navbar.sticky .logo a span{
       color: #fff;
   }
-  /* .navbar .menu li{
-      list-style: none;
-      display: inline-block;
-  }
-  .navbar .menu li a{
-      display: block;
-      color: #fff;
-      font-size: 18px;
-      font-weight: 500;
-      padding-left: 25px;
-      transition: color 0.3s ease;
-      text-shadow: 4px 2px 4px #000000;
-  }
-  .navbar .menu li a:hover{
-      color: #F9A826;
-  }
-  .navbar.sticky .menu li a:hover{
-      color: #fff;
-  }
-
-  .navbar .menu li a{
-    display: inline-block;
-    margin: 20px 0;
-    font-size: 25px;
-  } */
-
   
   .navbar #hidden {
     position: absolute;
@@ -81,56 +57,6 @@
     align-items: center;
   }
 
-  /* .navbar .menu .dropdown-content{
-    display: inline-block;
-    margin: 20px 0;
-    font-size: 20px;
-    display: none;
-    display: block;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .navbar .menu #teest{
-    display: inline-block;
-    margin: 20px 0;
-    font-size: 20px;
-    display: none;
-   
-  }
-
-  .navbar .menu .dropdown-content a{
-    background-color: rgba(16, 16, 16, 0.95);
-    background-color: transparent;
-    display: inline;
-    align-items: center;
-  }
-
-  .navbar .menu .dropdown-content a:hover{
-    color: #F9A826;
-  }
-
-  .navbar .menu .dropdown-content{
-    background-color: rgba(16, 16, 16, 0.95);
-    background-color: transparent;
-    box-shadow: none;
-    margin-left: -60px;
-    margin-top: -10px;
-  }
-
-  .navbar .menu li a{
-    display: inline-block;
-    margin: 20px 0;
-    font-size: 20px;
-  } */
-
-
-  /* .logo {
-    height: 100px;
-    width: 200px;
-  } */
-  
   #h3 {
     margin-right: 20px!important;
     background: linear-gradient(to right, #ffe7b3,#a146eb);

@@ -73,17 +73,19 @@ function DetailsPage() {
 
                                 <div id="container">	
 
-                                    <div className="product-details">
-                                        <h3 key={info.title} >{info.title}</h3>
+                                    <div className='product-details'>
+                                        <h3 id='h3DetailsPage' key={info.title} >{info.title}</h3>
                                         <h5 key={info.category} >{info.category}</h5>
-                                        <h5 key={info.rating.rate} >{info.rating.rate} / 5</h5>
-                                        <h5 key={info.rating.count} >{info.rating.count}</h5>
-                                        <p className="information" key={info.description}>{info.description}</p>
+                                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                                            <h5 key={info.rating.count} >count: {info.rating.count}</h5>
+                                            <h5 id='rating' key={info.rating.rate} >{info.rating.rate} / 5</h5>
+                                        </div>
+                                        <p className="information" id="informationProductDetails" key={info.description}>{info.description}</p>
                                         <button id='btnbtn'>${info.price} Buy</button> 
                                     </div>
                                     
-                                    <div class="product-image">
-                                        <img id="imageDetailsPage" key={info.image} src={info.image}  alt=""  style={{height: '300px', width: '200px', marginLeft: '30%',  marginTop: '100px' }}/>
+                                    <div>
+                                        <img className="imageDetailsPage" key={info.image} src={info.image}  alt=""/>
                                     </div>
 
                                 </div>
