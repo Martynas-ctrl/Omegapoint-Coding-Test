@@ -48,6 +48,7 @@ startar ngrok för att tunnla trafik mellan localhost och utåt.
 kör med "sh start.sh"
 
 Frontend(Javascript(Reactjs)
+
 Installera React om du inte redan har.
 Sedan öppna Git Bash, Windows Command Prompt eller PowerShell i en tom folder och kopiera in följande länk för att klona mitt projekt:
 https://github.com/Martynas-ctrl/Omegapoint-Coding-Test.git
