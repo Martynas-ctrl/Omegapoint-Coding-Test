@@ -30,6 +30,10 @@ function DetailsPage() {
         getProduct();
     });
 
+    const reloadPage = () => {
+        window.location.reload();
+      }
+
     if(errorMsg === true) {
         return (
             <div> 
@@ -47,6 +51,7 @@ function DetailsPage() {
                                 <p className="information">Page not Found!</p>
                                 <p className="information">Something went wrong! Look if the product you want to see still exist! Try to go back or refresh the page!</p>
 
+                                <button id='btnbtn' onClick={reloadPage}>Reload</button>
                             </div>
                             
                         </div>
