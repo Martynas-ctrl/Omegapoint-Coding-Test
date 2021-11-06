@@ -5,15 +5,15 @@ Backend(Python)
 
 Programmet har endast testats med python 3.9.7 på Windows.
 
-När alla dependencies är nedladdade startas servern via shell script
+När alla dependencies är nedladdade startas servern via shell script 	"sh start.sh". 
 
-"sh start.sh". Funkar det inte så går det även att starta manuellt.
+Funkar det inte så går det även att starta manuellt.
 
 Förutsatt att du är i samma katalog som app.py och ngrok så gör du då på följande sätt:
 
 "python app.py" -- för att starta en local server.
 
-Kör sedan "ngrok http 5000" eller "./ngrok http 5000" i en annan terminal om du vill ha extern tillgång till apin.
+Kör sedan 	"ngrok http 5000" eller 	"./ngrok http 5000" 	i en annan terminal om du vill ha extern tillgång till apin.
 
 requirements.txt
 
@@ -63,7 +63,7 @@ ngrok.exe ett program som kallas av test.sh för att tunnla trafik till localhos
 
 start.sh ett kort shell skript som startar APIn som en bakgrundsprocess och startar ngrok för att tunnla trafik mellan localhost och utåt.
 
-kör med "sh start.sh"
+kör med 	"sh start.sh"
 
 Frontend(React js)
 
@@ -79,10 +79,10 @@ Sedan mata in kommandot npm install för att ladda ner alla bibliotek som jag ha
 
 För att starta applikationen gör följande:
 
-	1. För att starta react app öppna terminalen eller git bash i frontend src folder och tryck npm start.
+1. För att starta react app öppna terminalen eller git bash i frontend src folder och tryck npm start.
 
-	2. Sedan i backend folder öppna Windows Command Prompt och mata in python app.py för att starta backend server.
+2. Sedan i backend folder öppna Windows Command Prompt och mata in python app.py för att starta backend server.
 
-	3. Öppna en till Windows Command Prompt i samma backend folder och skriv in ./ngrok http 5000.
+3. Öppna en till Windows Command Prompt i samma backend folder och skriv in ./ngrok http 5000.
 
 Om du följer instruktionerna så borde allting fungera.
