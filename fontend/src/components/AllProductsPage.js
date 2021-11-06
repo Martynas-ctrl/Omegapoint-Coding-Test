@@ -95,27 +95,31 @@ function AllProductsPage () {
                     <div className="port-content">
                         <OwlCarousel className="owl-theme" loop margin={10} {...responsiveWeb} items={20} autoplay >
                             {allProducts.map(product=> (
+                              
                               <div id="container">	
-	                              <div className="product-details">
-                                  <h3 key={product.title} >{product.title}</h3>
-                                  <p className="information" key={product.description}>{product.description}</p>
-                                  <h3 key={product.title} >${product.price}</h3>
-                                  <button id='btnbtn' onClick={sendToDetailsPage.bind(this, product.id)}>Read More</button>
-                                </div>
-                                
+
                                 <div class="product-image">
-                                  <img key={product.image} src={product.image}  alt="" />
+                                  <img className="imgProductList" key={product.image} src={product.image}  alt="" />
                               
                                   <div class="info">
                                     <h2>More Information</h2>
                                       <ul>
                                         <li><strong>Category : </strong> {product.category}</li>
-                                        <li><strong>Rating rate : </strong>{product.rating.rate}</li>
+                                        <li><strong>Rating rate : </strong>{product.rating.rate} / 5</li>
                                         <li><strong>Rating count : </strong>{product.rating.count}</li>
                                       </ul>
                                   </div>
 
                                 </div>
+
+	                              <div className="product-detailsProductList">
+                                  <h3 id='h3ProductList'key={product.title} >{product.title}</h3>
+                                  <p id="informationProductList" key={product.description}>{product.description}</p>
+                                  <h3 id='h3ProductList' key={product.title} >${product.price}</h3>
+                                  <button id='btnbtn' onClick={sendToDetailsPage.bind(this, product.id)}>Read More</button>
+                                </div>
+                                
+                                
                               </div> 
                             ) )}
                         </OwlCarousel>

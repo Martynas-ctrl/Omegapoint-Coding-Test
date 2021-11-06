@@ -131,12 +131,13 @@
     width: 200px;
   } */
   
-  h3 {
+  #h3 {
     margin-right: 20px!important;
     background: linear-gradient(to right, #ffe7b3,#a146eb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px!important;
 
   }
 

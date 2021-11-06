@@ -12,8 +12,8 @@ body {
     border-radius: 5px;
     overflow: hidden;
     margin: 5em auto;
-    max-height: 550px!important;
-    min-height: 550px;
+    max-height: 600px!important;
+    min-height: 600px;
 }
 
 .containerHomePage{
@@ -38,6 +38,16 @@ body {
     height: 100%;
 }
 
+.product-detailsProductList {
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    padding: 30px;
+    height: 100%;
+    float: left;
+    width: 55%;
+}
+
 
 #container .product-detailsHomePage h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -50,7 +60,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.information {
+.informationHome {
     font-family: 'EB Garamond', serif;
     text-align: center;
     font-size: 20px;

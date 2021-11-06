@@ -83,7 +83,7 @@ function DetailsPage() {
                                     </div>
                                     
                                     <div class="product-image">
-                                        <img key={info.image} src={info.image}  alt=""  style={{height: '300px', width: '200px', marginLeft: '30%',  marginTop: '100px' }}/>
+                                        <img id="imageDetailsPage" key={info.image} src={info.image}  alt=""  style={{height: '300px', width: '200px', marginLeft: '30%',  marginTop: '100px' }}/>
                                     </div>
 
                                 </div>

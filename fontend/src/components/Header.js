@@ -14,8 +14,8 @@ const Header = () => {
             </Helmet>
 
             <div className="container">
-                <Link to='/'><h3>Home</h3></Link>
-                <Link to='/AllProductsPage'><h3>Product</h3></Link>
+                <Link to='/'><h3 id="h3">Home</h3></Link>
+                <Link to='/AllProductsPage'><h3 id="h3">Product</h3></Link>
             </div>
 
         </header>
