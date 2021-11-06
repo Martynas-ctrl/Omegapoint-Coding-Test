@@ -25,9 +25,8 @@ App.py API applikationen. Applikationen är byggd i web-framworket flask.
 
 Eftersom databasen är relativt liten lagras den i den globala variablen DATABASE som en List. 
 
-Vid omstart av applikationen resettas även databasen till den som finns tillgänlig
-
-på "https://kodtest.azurewebsites.net/api/products?code=MWZOJunmBNEPDGxldyIKSplsqq/8Sv4c6KvgZ1vyh4Z9wCaw6rqJIA==".
+Vid omstart av applikationen resettas även databasen till den som finns tillgänlig på 
+	"https://kodtest.azurewebsites.net/api/products?code=MWZOJunmBNEPDGxldyIKSplsqq/8Sv4c6KvgZ1vyh4Z9wCaw6rqJIA==".
 
 Ifall nedladnning av originaldatabasen återger en annan statuskod än 200, stängs applikationen.
 
@@ -46,14 +45,15 @@ Applikationen har följande 4 routes som fungerar som API calls:
 När add_product apin kallas behövs produktdata i korrekt Json format skickas med.
 
 Nedan följande strukturen som behövs:
-        {"id" : 99,
-        "title" : "TITEL",
-        "category" : "EXEMPEL",
-        "description" : "DETTA E EN BESKRIVNING",
-        "image" : "<url_till_bilden>",
-        "rating" : { "count" : 10 , "rate" : 3.4 },
-        "price" : 888
-	}
+
+		{"id" : 99,
+		"title" : "TITEL",
+		"category" : "EXEMPEL",
+		"description" : "DETTA E EN BESKRIVNING",
+		"image" : "<url_till_bilden>",
+		"rating" : { "count" : 10 , "rate" : 3.4 },
+		"price" : 888
+		}
   
 Applikationen svarar med en 404 vid felaktiga argument eller data samt beskrivning av vad som var fel.
 
@@ -71,7 +71,7 @@ Installera React om du inte redan har.
 
 Sedan öppna Git Bash, Windows Command Prompt eller PowerShell i en tom folder och kopiera in följande länk för att klona mitt projekt:
 
-https://github.com/Martynas-ctrl/Omegapoint-Coding-Test.git
+	https://github.com/Martynas-ctrl/Omegapoint-Coding-Test.git
 
 Tryck enter och vänta tills det är klar.
 
@@ -79,10 +79,10 @@ Sedan mata in kommandot npm install för att ladda ner alla bibliotek som jag ha
 
 För att starta applikationen gör följande:
 
-1. För att starta react app öppna terminalen eller git bash i frontend src folder och tryck npm start.
+	1. För att starta react app öppna terminalen eller git bash i frontend src folder och tryck npm start.
 
-2. Sedan i backend folder öppna Windows Command Prompt och mata in python app.py för att starta backend server.
+	2. Sedan i backend folder öppna Windows Command Prompt och mata in python app.py för att starta backend server.
 
-3. Öppna en till Windows Command Prompt i samma backend folder och skriv in ./ngrok http 5000.
+	3. Öppna en till Windows Command Prompt i samma backend folder och skriv in ./ngrok http 5000.
 
 Om du följer instruktionerna så borde allting fungera.
